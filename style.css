@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    font-family:  sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(bgmoun.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(5px); 
+    z-index: -1;
+}
+.container{
+    width: 100%;
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.499);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: inset -2px 2px 2px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 28px;
+    margin: 0 28px;
+}
+.form-title{
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    padding-bottom: 6px;
+    text-shadow: 2px 2px 2px black;
+    /* border-bottom: solid 1px white; */
+}
+.main-user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 100%; */
+    padding: 20px 0;
+}
+
+.user-input-box:nth-child(2n){
+    justify-content: end;
+}
+
+.user-input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.user-input-box label{
+    width: 95%;
+    color: white;
+    font-size: 400;
+    margin: 5px 0;
+}
+
+.user-input-box input{
+    height: 40px;
+    width: 95%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+.gender-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    padding-bottom: 28px;
+    text-shadow: 2px 2px 2px black;
+    /* border-bottom: solid 1px white; */
+}
+.gender-category{
+    margin: 15px 0;
+    color: white;
+
+}
+.gender-category label{
+    padding: 0 20px 0 5px;
+}
+
+.gender-category label,
+.gender-category input,
+.form-submit-btn input {
+    cursor: pointer;
+}
+.form-submit-btn{
+    margin-top: 40px;
+}
+.form-submit-btn input {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    /* font-weight: 600; */
+    color: white;
+    border: none;
+    background: rgba(0, 128, 0, 0.485);
+    text-shadow: 2px 2px 2px black;
+
+}
+.form-submit-btn input:hover{
+    background: rgba(0, 128, 0, 0.75);
+    color: rgba(172, 255, 47, 0.578);
+}
+
+@media (max-width:600px){
+    .container{
+        min-width: 280px;
+    }
+    .user-input-box{
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .user-input-box:nth-child(2n){
+        justify-content: space-between;
+    }
+    .gender-category{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .main-user-info{
+        max-height: 380px;
+        overflow: auto;
+    }
+    .main-user-info::-webkit-scrollbar{
+        width: 0;
+    }
+}
